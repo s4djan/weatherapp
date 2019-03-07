@@ -27,7 +27,8 @@ const clearStyles = StyleSheet.create({
     touchable: {
         padding: 14,
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     icon:{
         paddingLeft: 7,

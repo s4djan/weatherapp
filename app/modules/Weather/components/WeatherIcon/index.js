@@ -11,7 +11,10 @@ const WeatherIcon = ({
     const fileName = `${type}_${size}`;
     
     return (
-        <Image source={ images[fileName] }/>
+        <Image 
+            style={{flex:1}} 
+            resizeMode="contain" 
+            source={ images[fileName] }/>
     )
 };
 

@@ -5,6 +5,8 @@ import { View, Text, StyleSheet } from 'react-native';
 import { ClearButton } from '../Button';
 import WeatherIcon from '../WeatherIcon';
 
+import styles from './style';
+
 const HeroCard = ({
     onPressButton,
     dateText,
@@ -78,67 +80,6 @@ HeroCard.propTypes = {
     sunrise: PropTypes.string,
     sunset: PropTypes.string
 }
-
-const styles = StyleSheet.create({
-    devider: {
-        height: 1,
-        backgroundColor: '#efefef'
-    },  
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        flexDirection: 'column'
-    },
-    topWrapper: {
-        flex: 1, 
-        flexDirection: 'row',
-        paddingTop: 12,
-        paddingRight: 15,
-        paddingBottom: 10,
-        paddingLeft: 15
-    },
-    dateText: {
-        color: '#ff6738',
-        fontWeight: 'bold',
-        fontSize: 16
-    },
-    degreeWrapper: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
-    },
-    degreeText: {
-        fontSize: 60,
-        color: '#000'
-    },
-    degreeLightText: {
-        fontSize: 40,
-        color: '#b7b7b7',
-        paddingTop: 8
-    },
-    descText:{
-        fontSize: 20,
-        color: '#b1b1b1'
-    },
-    additionalWrapper:{ 
-        flexDirection: 'row',
-        paddingTop: 12,
-        paddingRight: 15,
-        paddingBottom: 10,
-        paddingLeft: 15
-    },
-    listText:{
-        fontSize: 17,
-        color: '#000000',
-        marginBottom: 3
-    },
-    listLightText:{
-        fontSize: 17,
-        color: '#858585',
-        marginBottom: 3
-    }
-});
 
 
 export default HeroCard;
