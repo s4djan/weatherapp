@@ -41,7 +41,7 @@ export default StyleSheet.create({
         paddingTop: verticalScale(8)
     },
     descText:{
-        fontSize: verticalScale(16),
+        fontSize: verticalScale(18),
         color: '#b1b1b1'
     },
     additionalWrapper:{ 
