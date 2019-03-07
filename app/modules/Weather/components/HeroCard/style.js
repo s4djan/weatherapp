@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { scale } from 'app/modules/App/utils/font';
+import { verticalScale } from 'app/modules/App/utils/font';
 
 export default StyleSheet.create({
     devider: {
@@ -15,15 +15,15 @@ export default StyleSheet.create({
     topWrapper: {
         flex: 1, 
         flexDirection: 'row',
-        paddingTop: 12,
+        paddingTop: verticalScale(12),
         paddingRight: 15,
-        paddingBottom: 10,
+        paddingBottom: verticalScale(10),
         paddingLeft: 15
     },
     dateText: {
         color: '#ff6738',
         fontWeight: 'bold',
-        fontSize: 16
+        fontSize: verticalScale(16)
     },
     degreeWrapper: {
         flex: 1,
@@ -32,33 +32,33 @@ export default StyleSheet.create({
         alignItems: 'flex-start',
     },
     degreeText: {
-        fontSize: scale(60),
+        fontSize: verticalScale(60),
         color: '#000'
     },
     degreeLightText: {
-        fontSize: scale(40),
+        fontSize: verticalScale(40),
         color: '#b7b7b7',
-        paddingTop: 8
+        paddingTop: verticalScale(8)
     },
     descText:{
-        fontSize: scale(20),
+        fontSize: verticalScale(16),
         color: '#b1b1b1'
     },
     additionalWrapper:{ 
         flexDirection: 'row',
-        paddingTop: 12,
+        paddingTop: verticalScale(12),
         paddingRight: 15,
-        paddingBottom: 10,
+        paddingBottom: verticalScale(10),
         paddingLeft: 15
     },
     listText:{
-        fontSize: 17,
+        fontSize: verticalScale(17),
         color: '#000000',
-        marginBottom: 3
+        marginBottom: verticalScale(3)
     },
     listLightText:{
-        fontSize: 17,
+        fontSize: verticalScale(17),
         color: '#858585',
-        marginBottom: 3
+        marginBottom: verticalScale(3)
     }
 });
