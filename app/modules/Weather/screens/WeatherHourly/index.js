@@ -81,8 +81,6 @@ class WeatherHourlyScreen extends Component{
                     this._convertTime(hour, format) <= this._convertTime(currentHour, currentFormat))
                     continue;
 
-                    console.log(hour, currentHour);
-
                 const data = {
                     time: `${hour} ${format}`,
                     ...hourData
@@ -104,7 +102,7 @@ class WeatherHourlyScreen extends Component{
     }
 
     _convertTime = (hour, format) => 
-        parseInt(hour) + (format === 'PM' ? 12 : 0);
+        parseInt(moment(`${hour} ${format}`, 'h A').format('H'));
 
     _onPressSeeAll = () => {
         const {loadedData, remainingData} = this.state;
