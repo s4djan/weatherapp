@@ -3,18 +3,26 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import WeatherIcon from "../WeatherIcon";
 
-const HourlyCard = ({}) => (
+//@TODO move capitlize to utils
+//@TODO move style to separate file
+const HourlyCard = ({
+    time,
+    precipitation,
+    temperature,
+    description_flag,
+    wind
+}) => (
     <View style={styles.container}>
-        <Text style={styles.timeText} >1 PM</Text>
+        <Text style={styles.timeText} >{time}</Text>
         <View style={styles.weatherWrapper}>
             <WeatherIcon
                 size="sm"
-                type="sunny"
+                type={description_flag}
             />
         </View>
-        <Text style={styles.descText}>Partly Sunny</Text>
-        <Text style={styles.degreeText}>33&#176;</Text>
-        <Text style={styles.windText}>16km/h</Text>
+        <Text style={styles.descText}>{description_flag.split('_').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')}</Text>
+        <Text style={styles.degreeText}>{temperature}&#176;</Text>
+        <Text style={styles.windText}>{wind}km/h</Text>
     </View>
 );
 
@@ -37,10 +45,14 @@ const styles = StyleSheet.create({
     },
     descText: {
         fontSize: 16,
-        color: '#8f8f8f'
+        color: '#8f8f8f',
+        height: 40
     },
     degreeText: {
-        fontSize: 43,
+        fontSize: 40,
+        lineHeight: 40,
+        marginTop: 10,
+        textAlign: 'center',
         color: '#000'
     },
     windText: {

@@ -11,7 +11,8 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'stretch',
         backgroundColor: '#efefef',
-        padding: 8
+        paddingTop: 8,
+        paddingBottom: 8,
     },
     text: {
         width: '100%',
@@ -28,13 +29,15 @@ export default StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-between'
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start'
     },
     cardWrapper: {
         height: height/3, 
         width: (width - 16)/4-6,
         backgroundColor: '#FFF', 
-        marginBottom: 6
+        marginBottom: 6,
+        marginLeft: 8
     }
 });
 

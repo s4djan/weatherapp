@@ -1,6 +1,8 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import axios from 'axios';
 
+import NavigationService from 'app/modules/App/services/Navigation'
+
 //@TODO move this to service and move url to env constants
 function fetchWeather(startDate, endDate) {
 
@@ -23,7 +25,7 @@ function* fetchWeatherSaga(action) {
 
     } catch (error) {
         yield put({ type: "API_CALL_FAILURE", error });
-    } 
+    }
 
     yield put({ type: "HIDE_LOADER" });
 }

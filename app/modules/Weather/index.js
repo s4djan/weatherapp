@@ -100,9 +100,7 @@ class WeatherScreen extends Component{
 
 const mapStateToPops = state => {
     return {
-        fetching: state.weather.fetching,
-        weatherData: state.weather.data,
-        error: state.weather.error
+        weatherData: state.weather.weatherRequest.data
     }
 }
 

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 
 import Loader from './components/Loader'
-
+import NavigationService from './services/Navigation';
 import createContainer from './router';
 
 
@@ -14,9 +14,11 @@ class App extends Component {
     const { showLoader } = this.props;
 
     return (
-      <View style={{flex:1}}>
-          <AppNavigationContainer />
-          {showLoader && <Loader/>}
+      <View style={{ flex: 1 }}>
+        <AppNavigationContainer ref={navigatorRef => {
+          NavigationService.setTopLevelNavigator(navigatorRef);
+        }} />
+        {showLoader && <Loader />}
       </View>
     );
   }
